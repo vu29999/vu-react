@@ -1,0 +1,6 @@
+.sub-visual-cont{background: url('../../assets/images/main/sub-vi05.jpg') no-repeat center / cover;height:210px;display: flex;justify-content: center;align-items: center;color: #fff;}
+.sub-visual-cont h2{font-size: 42px;line-height: 50px;font-weight: 700;text-align: center;}
+@media screen and (max-width:1024px){
+	.sub-visual-cont{height:150px;}
+	.sub-visual-cont h2{font-size: 36px;line-height: 47.2px;}
+}

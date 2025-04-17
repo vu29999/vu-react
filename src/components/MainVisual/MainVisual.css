@@ -1,0 +1,201 @@
+/*Main visual*/
+
+.main-visual-item {
+    display: flex;
+    margin-bottom: 70px;
+}
+
+.main-visual-item .main-visual-left {
+    position: relative;
+}
+
+.main-visual-item .main-visual-right {
+    margin-top: 50px;
+    margin-left: 60px;
+}
+
+.main-visual-item .main-visual-left img {
+    max-width: 100%;
+    border-radius: 40px;
+}
+
+.main-visual-item .main-visual-right {
+    max-width: 500px;
+}
+
+.main-visual-item .main-visual-right h4 {
+    color: #FFF;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 120%;
+    margin-bottom: 25px;
+}
+
+.main-visual-item .main-visual-right .main-visual-desc {
+    margin-bottom: 25px;
+}
+
+.main-visual-item .main-visual-right .main-visual-desc p {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.main-visual-item .main-visual-right .main-visual-link {
+    color: #014D8A;
+    font-size: 14px;
+    font-weight: 560;
+    line-height: 140%;
+    display: inline-block;
+    padding: 9px 50px 9px 15px;
+    border-radius: 26px;
+    /* background: url('../img/common/ico-right-blue.png') no-repeat #FFF right 15px center; */
+}
+
+/*custom dots & arrow for slide*/
+.main-visual-box .swiper-pagination {
+    text-align: center;
+    padding-bottom: 34px;
+    position: relative;
+}
+
+.main-visual-box .swiper-pagination span {
+    margin: 0 7.5px;
+    display: inline-block;
+    width: 80px;
+    height: 6px;
+    border: 0;
+    color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 0;
+}
+
+.main-visual-box .swiper-pagination a.slick-active {
+    background: #4BADA3;
+}
+
+.main-visual-box .swiper-button {
+    position: absolute;
+    top: calc(50% - 50px);
+    width: 128px;
+    height: 128px;
+    display: block;
+    border: 0;
+    color: transparent;
+    cursor: pointer;
+}
+
+.main-visual-box .swiper-button-next,
+.main-visual-box .swiper-button-prev {
+    display: unset;
+    opacity: 1;
+    width: 60px;
+    height: 100px;
+    top: 46%;
+    border: 0;
+}
+
+.main-visual-box .swiper-button-prev {
+    left: -88px;
+    background: url('../../assets/images/common/slick-prev.png') no-repeat center;
+}
+
+.main-visual-box .swiper-button-next {
+    right: -88px;
+    background: url('../../assets/images/common/slick-next.png') no-repeat center;
+}
+
+.main-visual-box .swiper-button-prev:after,
+.main-visual-box .swiper-button-next:after {
+    display: none;
+}
+
+.main-visual-box .main-visual-content .swiper-pagination .swiper-pagination-bullet {
+    background: #D9D9D9;
+    opacity: 1;
+    margin: 0px 7px;
+}
+
+.main-visual-box .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #F7D300;
+}
+
+
+@media screen and (max-width:1400px) {
+    .main-visual-item {
+        justify-content: unset;
+        padding: 0 16px;
+    }
+
+    .main-visual-item .main-visual-left {
+        width: 50%;
+    }
+
+    .main-visual-item .main-visual-right {
+        width: 50%;
+        margin-left: 30px;
+    }
+
+    .main-visual-item .main-visual-right h4 {
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .main-visual-item .main-visual-right {
+        margin-top: 0;
+    }
+
+    .main-visual-box .slick-arrow {
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .main-visual-item {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .main-visual-item .main-visual-left {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .main-visual-item .main-visual-right {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .main-visual-item .main-visual-right h4 {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 18px;
+    }
+
+    .main-visual-item .main-visual-right .main-visual-desc p {
+        font-size: 16px;
+    }
+
+    .main-visual-box .swiper-button {
+        margin-bottom: 0;
+    }
+
+    .main-visual-box .swiper-pagination a {
+        width: 60px;
+    }
+
+    .main-visual-item .main-visual-right .main-visual-desc {
+        margin-bottom: 45px;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+    .main-visual-box .swiper-pagination {
+        padding: 0px 0 20px 0;
+    }
+}

@@ -1,0 +1,7 @@
+.sub-title {margin-bottom: 45px;}
+.sub-title h3 {font-size: 40px;font-weight: 700;color: #222;text-align: center;line-height: 50px;}
+
+@media screen and (max-width: 768px) {
+	.sub-title {margin-bottom: 25px;}
+	.sub-title h3 {font-size: 26px;line-height: 32px;}
+}

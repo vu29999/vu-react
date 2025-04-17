@@ -1,0 +1,48 @@
+.tab-mobile {position: relative;}
+.tab-mobile button{position: relative;width: 100%;background: #004E89 url(../../assets/images/common/ico-tab-open.png) no-repeat center right 15px;background-size: 12px;
+    text-align: center;display: block;padding: 13px 0;font-size: 16px;color: #fff;font-weight: 400;text-overflow: ellipsis;white-space: nowrap;word-wrap: normal;overflow: hidden;
+    border: 0;}
+    
+.tab-mobile ul{
+    border: 1px solid #cdcdcd;
+    position: absolute;
+    width: 100%;
+    /* max-width: -webkit-fill-available; */
+    box-sizing: border-box;}
+.tab-mobile ul li a{font-size: 16px;color: #666;padding: 10px;display: block;background: #fff;}
+.tab-mobile ul li a.active {background: #c0f1ff;}
+.tab-mobile ul li:first-child a{}
+
+    /* 탭 */
+.tab-box ul.tab-ul01{display: table;width: 100%;table-layout: fixed;}
+.tab-box ul.tab-ul01 li{display: table-cell;position:relative;vertical-align: bottom;}
+.tab-box ul.tab-ul01 li a{display:table;width:100%;min-height:60px;border:1px solid #ccc;border-left:none;background-color:#fff;table-layout:fixed;box-sizing:border-box;}
+.tab-box ul.tab-ul01 li:first-of-type a{border-left:1px solid #ccc;}
+.tab-box ul.tab-ul01 li.active a{border-color: #0078AF;background-color:#0078AF;}
+.tab-box ul.tab-ul01 li a span{display:table-cell;padding: 8px 10px;font-size:18px;color:#000;font-weight: 400;line-height:28.8px;text-align:center;vertical-align:middle;word-break:keep-all;}
+.tab-box ul.tab-ul01 li.active a span{color:#fff;}
+
+.tab-box.con-tab ul{display:flex;flex-wrap:wrap;border-top:1px solid #ccc;border-left:1px solid #ccc;}
+.tab-box.con-tab ul li:nth-of-type(n){width:20%;border-top:none;border-left:none;box-sizing:border-box;}
+.tab-box.con-tab ul li:nth-of-type(n) a{display:table;width:100%;min-height:60px;border:none;border-right:1px solid #ccc;border-bottom:1px solid #ccc;table-layout:fixed;}
+.tab-box.con-tab ul li:nth-of-type(n) a span{display:table-cell;padding: 6px 10px;vertical-align:middle;}
+
+.m-tab-box{display:none;}
+
+
+/* 모바일탭 */ 
+.m-tab-box{position:relative;margin:0 0 30px;background:#004E89 url(../../assets/images/common/ico-tab-open.png) no-repeat center right 15px;background-size:12px;text-align:center;}
+.m-tab-box.active{background-image:url(../../assets/images/common/ico-tab-close.png);}
+.m-tab-box label{display:block;padding:13px 0;font-size:16px;color:#fff;font-weight:400;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.tab-sel{position:absolute;left:0;top:0;width:100%;background:transparent;height:39px;border:0;color:#fff;filter:alpha(opacity=0);opacity:0;}
+.tab-sel option{font-size:16px;color:#666;}
+
+@media screen and (max-width:768px){
+    .tab-box ul.tab-ul01 {display: none;}
+	/* 탭 - 대외협력처 사이트에서는 모바일 셀렉트박스 탭 사용 안함 */    
+	/* body:not(.giving-site) .tab-box:not(.con-tab){display:none;}
+	body:not(.giving-site) .m-tab-box{display:block;position:relative;margin: 0;}
+	.m-tab-box label{display:block;position:relative;padding: 0 30px;background: #0078AF url(../assets/images/common/btn-tab-open.png) no-repeat right 10px top 50%;width:100%;height: 42px;line-height: 42px;font-weight:500;font-size:14px;color:#fff;-webkit-appearance:none;-moz-appearance:none;appearance:none;text-align:center;box-sizing:border-box}
+	.tab-sel{position:absolute;top:0;left:0;width:100%;height: 42px;filter:alpha(opacity=0);opacity:0;}
+	.tab-sel option{background:#f2f2f2;color:#395065;} */
+}
