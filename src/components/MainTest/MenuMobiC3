@@ -53,7 +53,7 @@ const MenuMobile = ({ menuData }) => {
                                             menuItem.sub?.some(
                                                 sub => isActive(sub.path) || sub.subSub?.some(subSub => isActive(subSub.path))
                                             )
-                                            ? "acti"
+                                            ? "active"
                                             : ""
                                         } ${openMobileIndex === index ? "open" : ""}`}
                                 >
@@ -88,7 +88,7 @@ const MenuMobile = ({ menuData }) => {
                                                         className={`${hasSubSub ? "has-sub" : ""
                                                             } ${isActive(subItem.path) ||
                                                                 subItem.subSub?.some(subSub => isActive(subSub.path))
-                                                                ? "acti"
+                                                                ? "active"
                                                                 : ""
                                                             } ${openSubIndex === subIndex ? "open" : ""}`}
                                                     >
@@ -109,7 +109,7 @@ const MenuMobile = ({ menuData }) => {
                                                         {openSubIndex === subIndex && hasSubSub && (
                                                             <ul className="dep3">
                                                                 {subItem.subSub.map((subSubItem, idx) => (
-                                                                    <li key={idx} className={isActive(subSubItem.path) ? "acti" : ""}>
+                                                                    <li key={idx} className={isActive(subSubItem.path) ? "active" : ""}>
                                                                         <Link
                                                                             to={subSubItem.path}
 

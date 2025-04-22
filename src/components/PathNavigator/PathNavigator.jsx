@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import "./PathNavigator.css";
+import { CSSTransition } from "react-transition-group";
 
 // Tìm menu cấp 1 theo path hiện tại
 const findCurrentMenu = (menuData, path) => {
@@ -15,7 +16,7 @@ const findCurrentMenu = (menuData, path) => {
     );
 };
 
-// Tìm menu cấp 2 theo path hiện tại
+// Tìm menu cấp 2 theo path hiện tại (kiểm tra cả subSub)
 const findCurrentSub = (menu, path) => {
     return menu?.sub?.find(sub =>
         path === sub.path ||
@@ -61,6 +62,8 @@ const PathNavigator = ({ menuData }) => {
         };
     }, []);
 
+    const menu1NodeRef = useRef(null);
+    const menu2NodeRef = useRef(null);
 
     return (
         <div className="path-wrap">
@@ -72,16 +75,22 @@ const PathNavigator = ({ menuData }) => {
                     <div className="path-depth-wrap">
                         <ul>
                             {/* Menu cấp 1 */}
+
                             <li ref={menu1Ref} className={activeMenu1 ? "active" : ""}>
                                 <button
                                     className={`path-selected ${activeMenu1 ? "active" : ""}`}
                                     onClick={() => setActiveMenu1(prev => !prev)}
-
                                 >
                                     {currentMenu?.title || "메뉴 전체 보기"}
                                 </button>
-                                {activeMenu1 && (
-                                    <ul className="path-depth">
+                                <CSSTransition
+                                    in={activeMenu1}
+                                    timeout={300}
+                                    classNames="fade"
+                                    unmountOnExit
+                                    nodeRef={menu1NodeRef}
+                                >
+                                    <ul className="path-depth" ref={menu1NodeRef}>
                                         {menuData.map((menu, index) => (
                                             <li key={index}>
                                                 <Link
@@ -93,7 +102,8 @@ const PathNavigator = ({ menuData }) => {
                                             </li>
                                         ))}
                                     </ul>
-                                )}
+                                </CSSTransition>
+
                             </li>
 
                             {/* Menu cấp 2 */}
@@ -105,20 +115,34 @@ const PathNavigator = ({ menuData }) => {
                                     >
                                         {currentSub?.title || "서브 메뉴"}
                                     </button>
-                                    {activeMenu2 && (
-                                        <ul className="path-depth">
-                                            {currentMenu.sub.map((sub, index) => (
-                                                <li key={index}>
-                                                    <Link
-                                                        to={sub.path}
-                                                        className={currentPath === sub.path ? "active" : ""}
-                                                    >
-                                                        {sub.title}
-                                                    </Link>
-                                                </li>
-                                            ))}
+
+                                    <CSSTransition
+                                        in={activeMenu2}
+                                        timeout={300}
+                                        classNames="fade"
+                                        unmountOnExit
+                                        nodeRef={menu2NodeRef}
+                                    >
+                                        <ul className="path-depth" ref={menu2NodeRef}>
+                                            {currentMenu.sub.map((sub, index) => {
+                                                const isActiveSub =
+                                                    currentPath === sub.path ||
+                                                    sub.subSub?.some(subsub => currentPath === subsub.path);
+
+                                                return (
+                                                    <li key={index}>
+                                                        <Link
+                                                            to={sub.path}
+                                                            className={isActiveSub ? "active" : ""}
+                                                        >
+                                                            {sub.title}
+                                                        </Link>
+                                                    </li>
+                                                );
+                                            })}
                                         </ul>
-                                    )}
+                                    </CSSTransition>
+
                                 </li>
                             )}
                         </ul>

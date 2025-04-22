@@ -1,4 +1,4 @@
-.tab-mobile {position: relative;}
+.tab-mobile {position: relative;display: none;}
 .tab-mobile button{position: relative;width: 100%;background: #004E89 url(../../assets/images/common/ico-tab-open.png) no-repeat center right 15px;background-size: 12px;
     text-align: center;display: block;padding: 13px 0;font-size: 16px;color: #fff;font-weight: 400;text-overflow: ellipsis;white-space: nowrap;word-wrap: normal;overflow: hidden;
     border: 0;}
@@ -39,6 +39,7 @@
 
 @media screen and (max-width:768px){
     .tab-box ul.tab-ul01 {display: none;}
+    .tab-mobile {display: block;}
 	/* 탭 - 대외협력처 사이트에서는 모바일 셀렉트박스 탭 사용 안함 */    
 	/* body:not(.giving-site) .tab-box:not(.con-tab){display:none;}
 	body:not(.giving-site) .m-tab-box{display:block;position:relative;margin: 0;}

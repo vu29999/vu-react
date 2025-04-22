@@ -9,7 +9,7 @@ import menuData from "../../components/Header/MenuData";
 import "../../css/Guide.css";
 import "./Team.css";
 
-const Team = () => {
+const Team02 = () => {
 
     return (
         <>
@@ -17,13 +17,12 @@ const Team = () => {
             <div className="sub-container">
                 <SubVisual menuData={menuData} />
                 <PathNavigator menuData={menuData} />
-                {/* <SubMenu menuData={menuData} /> */}
                 <div className="content-wrap">
                     <TitlePage menuData={menuData} />
                     <div className="sub-content">
                         <div className="content-box">
                             <div className="con-box no-pd">
-                                <h4 class="h4-tit01">Team Page</h4>
+                                <h4 className="h4-tit01">Team Page 02</h4>
                             </div>
                         </div>
                     </div>
@@ -34,4 +33,4 @@ const Team = () => {
     );
 };
 
-export default Team;
+export default Team02;

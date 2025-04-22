@@ -3,28 +3,35 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import SubVisual from "../../components/SubVisual/SubVisual";
 import TitlePage from "../../components/TitlePage/TitlePage";
-// import PathNavigator from "../../components/PathNavigator/PathNavigator";
-import SubMenu from "../../components/SubMenu/SubMenu";
+import PathNavigator from "../../components/PathNavigator/PathNavigator";
+import TabMenu from "../../components/TabMenu/TabMenu";
+import TabMenuMobi from "../../components/TabMenu/TabMenuMobi";
 import menuData from "../../components/Header/MenuData";
 
 import "../../css/Guide.css";
-import "./Team.css";
+import "./TabMn.css";
 
-const Team02 = () => {
+const TabMn02 = () => {
 
     return (
         <>
             <Header />
             <div className="sub-container">
                 <SubVisual menuData={menuData} />
-                {/* <PathNavigator menuData={menuData} /> */}
-                <SubMenu menuData={menuData} />
+                <PathNavigator menuData={menuData} />
+
                 <div className="content-wrap">
+                    <div className="tab-wrap">
+                        <div className="tab-box">
+                            <TabMenu menuData={menuData} />
+                            <TabMenuMobi menuData={menuData} />
+                        </div>
+                    </div>
                     <TitlePage menuData={menuData} />
                     <div className="sub-content">
                         <div className="content-box">
                             <div className="con-box no-pd">
-                                <h4 class="h4-tit01">Team Page 02</h4>
+                                <h4 className="h4-tit01">tab 03</h4>
                             </div>
                         </div>
                     </div>
@@ -35,4 +42,4 @@ const Team02 = () => {
     );
 };
 
-export default Team02;
+export default TabMn02;

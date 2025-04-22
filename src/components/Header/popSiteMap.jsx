@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import hamburgerMap from '../../assets/images/common/hamburger-map.png';
-import hamburgerMapOn from '../../assets/images/common/hamburger-map-on.png';
 import iconClose from '../../assets/images/common/ico-close.png';
 
 const PopSiteMap = ({ menuData }) => {

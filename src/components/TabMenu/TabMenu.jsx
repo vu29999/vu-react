@@ -30,7 +30,7 @@ const TabMenu = ({ menuData }) => {
 
                     return (
                         <li
-                            key={menu.menuCd}
+                            key={menu.menuCd || index}  // Nếu menu.menuCd không duy nhất, dùng index
                             className={classNames({
                                 active: isActive,
                                 first: isFirst,

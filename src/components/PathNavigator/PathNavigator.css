@@ -10,22 +10,27 @@
 .path-depth-wrap > ul:after{content:'';display:block;clear:both;}
 .path-depth-wrap > ul > li{float:left;position:relative;min-width:200px;border-right: 1px solid #e8e8e8;box-sizing: border-box;}
 .path-depth-wrap > ul > li > .path-selected{display:block;padding: 15px 34px 14px 15px;background:url(../../assets/images/common/ico-down-b.png) no-repeat right 15px center;font-size: 18px;font-weight: 400;line-height: 28.8px;color: #222;    
-	width: 100%;border: 0;}
+	width: 100%;border: 0;text-align: start;cursor: pointer;}
 .path-depth-wrap > ul > li.active > .path-selected{background:url(../../assets/images/common/ico-up-b.png) no-repeat right 15px center;}
-.path-depth-wrap > ul > li > .path-depth{position:absolute;top:100%;left:-1px;z-index:20;padding:18px 24px;width:calc(100% + 2px);background:#fff;border:1px solid #dbdbdb;box-sizing:border-box;
-	transition: max-height 5s ease-out;}
+.path-depth-wrap > ul > li > .path-depth{position:absolute;top:100%;left:-1px;z-index:20;padding:18px 24px;width:calc(100% + 2px);background:#fff;border:1px solid #dbdbdb;box-sizing:border-box;}
+		
+.path-depth-wrap .fade-enter {opacity: 0;transform: scaleY(0);transform-origin: top;}
+.path-depth-wrap .fade-enter-active {opacity: 1;transform: scaleY(1);transition: opacity 300ms ease, transform 300ms ease;}
+.path-depth-wrap .fade-exit {opacity: 1;transform: scaleY(1);}
+.path-depth-wrap .fade-exit-active {transform-origin: top;opacity: 0;transform: scaleY(0);transition: opacity 300ms ease, transform 300ms ease;}
+
 .path-depth-wrap > ul > li > .path-depth > li{padding:0 0 9px 0;}
 .path-depth-wrap > ul > li > .path-depth > li:last-of-type{padding:0;}
 .path-depth-wrap > ul > li > .path-depth > li > a{font-size:15px;color:#222;font-weight:400;}
-.path-depth-wrap > ul > li > .path-depth > li > a.active {color:#1f51a2;}
-.path-depth-wrap > ul > li > .path-depth > li > a:hover{color:#333;text-decoration:underline;}
+.path-depth-wrap > ul > li > .path-depth > li > a.active {color: #004389}
+.path-depth-wrap > ul > li > .path-depth > li > a:hover{text-decoration:underline;}
 .path-depth-wrap > ul > li > .path-depth > li.active > a{display:inline-block;position:relative;color:#1f51a2;text-decoration:underline;}
 
 @media screen and (max-width:1024px){
 	.path-wrap {margin: -25px 16px 0;}
 	.path-home{width: 50px;height: 50px;}
 	.path-depth-wrap{width:calc(100% - 50px);}
-	.path-depth-wrap > ul > li > .path-selected{font-size: 14px;padding:10px 25px 10px 9px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;text-align: start;}
+	.path-depth-wrap > ul > li > .path-selected{font-size: 14px;padding:10px 25px 10px 9px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
 	.path-depth-wrap > ul > li > .path-depth{padding:10px 9px;}
 }
 

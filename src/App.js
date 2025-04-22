@@ -3,10 +3,9 @@ import './App.css';
 
 import routes from "./pages/index";
 
-import { useEffect } from "react";
+
 
 function App() {
-
 
   return (
     <div className="App wrap">

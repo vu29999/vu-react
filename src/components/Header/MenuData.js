@@ -6,10 +6,10 @@ const menuData = [
             {
                 title: "인사말",
                 path: "/intro/greeting",
-                subSub: [
-                    { title: "menu sub-sub 01", path: "/menu/sub01/01" },
-                    { title: "menu sub-sub 02", path: "/menu/sub01/02" }
-                ]
+                // subSub: [
+                //     { title: "menu sub-sub 01", path: "/menu/sub01/01" },
+                //     { title: "menu sub-sub 02", path: "/menu/sub01/02" }
+                // ]
 
             },
             {
@@ -52,9 +52,9 @@ const menuData = [
             {
                 title: "team 01",
                 path: "/team/team",
-                subSub: [
-                    { title: "team sub-sub 01", path: "/team/sub01/01" }
-                ]
+                // subSub: [
+                //     { title: "team sub-sub 01", path: "/team/sub01/01" }
+                // ]
             },
             {
                 title: "team 02",

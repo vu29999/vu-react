@@ -5,9 +5,9 @@ import Footer from "../../components/Footer/Footer";
 import SubVisual from "../../components/SubVisual/SubVisual";
 import TitlePage from "../../components/TitlePage/TitlePage";
 import PathNavigator from "../../components/PathNavigator/PathNavigator";
-import menuData from "../../components/Header/MenuData";
+import menuData from "../../components/Header/MenuData.js";
 
-import TableScroll from "../../components/Common/TableScroll.js";
+import TableScroll from "../../components/Common/TableScroll";
 
 import "../../css/Guide.css";
 import "../../css/table.css";

@@ -8,6 +8,7 @@ import Team from "./Team/Team";
 import Team02 from "./Team/Team02";
 import Service from "../pages/Service";
 import Home from "../pages/Home";
+import Logins from "../pages/Login/Logins";
 
 const routes = [
     { path: '/', element: <Home /> },
@@ -20,6 +21,7 @@ const routes = [
     { path: '/team/team02', element: <Team02 /> },
     { path: '/about', element: <About /> },
     { path: '/service', element: <Service /> },
+    { path: '/login', element: <Logins /> },
 ]
 
 export default routes;

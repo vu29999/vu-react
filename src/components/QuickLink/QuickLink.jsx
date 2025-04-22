@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./QuickLink.css";
 import { Link } from 'react-router-dom';
 import dataQuick from '../../assets/fake-data/data-Quick';

@@ -4,14 +4,12 @@ import Footer from "../../components/Footer/Footer";
 import SubVisual from "../../components/SubVisual/SubVisual";
 import TitlePage from "../../components/TitlePage/TitlePage";
 import PathNavigator from "../../components/PathNavigator/PathNavigator";
-import TabMenu from "../../components/TabMenu/TabMenu";
-import TabMenuMobi from "../../components/TabMenu/TabMenuMobi";
 import menuData from "../../components/Header/MenuData";
 
 import "../../css/Guide.css";
-import "./TabMn.css";
+import "./Team.css";
 
-const TabMn01 = () => {
+const Team = () => {
 
     return (
         <>
@@ -19,19 +17,13 @@ const TabMn01 = () => {
             <div className="sub-container">
                 <SubVisual menuData={menuData} />
                 <PathNavigator menuData={menuData} />
-
+                {/* <SubMenu menuData={menuData} /> */}
                 <div className="content-wrap">
-                    <div className="tab-wrap">
-                        <div className="tab-box">
-                            <TabMenu menuData={menuData} />
-                            <TabMenuMobi menuData={menuData} />
-                        </div>
-                    </div>
                     <TitlePage menuData={menuData} />
                     <div className="sub-content">
                         <div className="content-box">
                             <div className="con-box no-pd">
-                                <h4 class="h4-tit01">tab 01</h4>
+                                <h4 className="h4-tit01">Team Page</h4>
                             </div>
                         </div>
                     </div>
@@ -42,4 +34,4 @@ const TabMn01 = () => {
     );
 };
 
-export default TabMn01;
+export default Team;

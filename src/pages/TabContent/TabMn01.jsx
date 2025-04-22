@@ -5,12 +5,13 @@ import SubVisual from "../../components/SubVisual/SubVisual";
 import TitlePage from "../../components/TitlePage/TitlePage";
 import PathNavigator from "../../components/PathNavigator/PathNavigator";
 import TabMenu from "../../components/TabMenu/TabMenu";
+import TabMenuMobi from "../../components/TabMenu/TabMenuMobi";
 import menuData from "../../components/Header/MenuData";
 
 import "../../css/Guide.css";
 import "./TabMn.css";
 
-const TabMn02 = () => {
+const TabMn01 = () => {
 
     return (
         <>
@@ -23,13 +24,14 @@ const TabMn02 = () => {
                     <div className="tab-wrap">
                         <div className="tab-box">
                             <TabMenu menuData={menuData} />
+                            <TabMenuMobi menuData={menuData} />
                         </div>
                     </div>
                     <TitlePage menuData={menuData} />
                     <div className="sub-content">
                         <div className="content-box">
                             <div className="con-box no-pd">
-                                <h4 class="h4-tit01">tab 03</h4>
+                                <h4 className="h4-tit01">tab 01</h4>
                             </div>
                         </div>
                     </div>
@@ -40,4 +42,4 @@ const TabMn02 = () => {
     );
 };
 
-export default TabMn02;
+export default TabMn01;

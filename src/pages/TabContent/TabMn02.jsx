@@ -31,7 +31,7 @@ const TabMn02 = () => {
                     <div className="sub-content">
                         <div className="content-box">
                             <div className="con-box no-pd">
-                                <h4 class="h4-tit01">tab 02</h4>
+                                <h4 className="h4-tit01">tab 02</h4>
                             </div>
                         </div>
                     </div>

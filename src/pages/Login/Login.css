@@ -1,0 +1,66 @@
+.tabs {display: flex;flex-wrap: wrap;position: relative;}
+.tabs .tab-a {order: 1;padding: 20px 0;background: #99c9de;width: 50%;text-align: center;font-size: 18px;color: #fff;font-weight: 600;border: 2px solid #0078AD;
+    border-radius: inherit;box-sizing: border-box;border-radius: 0 15px 0 0;cursor: pointer;}
+
+.tabs .tab-a:first-child {border-right: none;border-radius: 15px 0 0 0;}
+.tabs .tab-con {order: 99;width: 100%;/* display: none; */background: #fff;border-radius: 0 0 15px 15px;border: 2px solid #0078AD;border-top: none;padding: 25px 20px;}
+.tabs button.active {background: #fff;border-bottom: none;color: #222222;}
+.tabs a.active + .tab-con {display: block;}
+.tabs .tab-a:focus-visible {border: 2px solid #000;}
+.tabs.login02 .tab-con {order: 99;width: 100%;display: block;background: #fff;border-radius: 15px;border: 2px solid #0078AD;padding: 25px 20px;}
+
+/*login */
+.login-wrap {background: #f4f8fc;position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 3333;display: none;overflow: hidden;}
+.login-wrap .login-logo {margin-bottom: 30px;text-align: center;}
+.login-wrap .login-inner {display: flex;align-items: center;justify-content: center;flex-direction: column;height: 100vh;}
+.login-inner .login-body-box {width: 435px;margin: 0 auto;border-radius: 15px;}
+.login-inner .login-body-box .login-head {margin-bottom: 20px;}
+.login-inner .login-body-box h2 {font-size: 24px;font-weight: 700;line-height: 31.2px;text-align: center;color: #0078AD;margin-bottom: 10px;}
+.login-inner .login-body-box p {font-size: 16px;font-weight: 400;line-height: 24px;text-align: center;color: #222;}
+.login-inner .btn-close {position: absolute;top: 50px;right: 50px;}
+.login-inner .btn-close img {width: 60px;height: 60px;}
+.login-box .inner-form {position: relative;margin-bottom: 20px;}
+.login-box .inner-form:last-of-type {margin-bottom: 25px;}
+.login-box .inner-form label {font-size: 16px;font-weight: 500;line-height: 20.8px;text-align: left;margin: 0 0 8px 0;display: inline-block;}
+.login-box .inner-form label span {color: #0078AD;}
+.login-box .inner-form input {width: 100%;border-radius: 50px;border: 1px solid #A0A0A0;background: #FFFFFF;font-size: 16px;font-weight: 400;line-height: 24px;padding: 13px 20px;box-sizing: border-box;color: #A0A0A0;}
+.login-box .inner-form input:focus {border: 2px solid #000;}
+.login-box .inner-form input::placeholder {color: #A0A0A0;}
+.login-box .inner-form .eye-off,.login-box .inner-form .eye-on {width: 24px;height: 24px;position: absolute;top: 52%;right: 20px;border: 0;}
+.login-box .inner-form .eye-off {background: url(../../assets/images/common/ico-eye-off.png) no-repeat center;background-size: contain;}
+.login-box .inner-form .eye-on {background: url(../../assets/images/common/ico-eye-on.png) no-repeat center;background-size: contain;}
+.login-box .btn-login {padding: 13.5px 20px;border-radius: 50px;background: #0078AD;font-size: 18px;line-height: 23.4px;font-weight: 500;color: #FFFFFF;width: 100%;cursor: pointer;border: 0;}
+.login-box .login-top {padding-bottom: 15px;}
+.login-box .login-bottom {margin: 0 auto;max-width: 1200px;box-sizing: border-box;}
+.login-box .login-bottom ul {display: flex;justify-content: center;gap: 15px;}
+.login-box .login-bottom ul li {width: 50%;}
+.login-box .login-bottom ul li a {position: relative;display: flex;align-items: center;justify-content: center;border-radius: 30px;font-size: 18px;line-height: 1;font-weight: 500;color: #fff;text-align: center;}
+.login-box .login-bottom ul li.naver a {background: #03C75A;padding: 16px 19px 16px 55px;}
+.login-box .login-bottom ul li.kakao a {background: #fee500;padding: 16px 19px 16px 49px;color: #222;}
+.login-box .login-bottom ul li.facebook a {background: #0064E0;padding: 16px 19px 16px 49px;}
+.login-box .login-bottom ul li a span {position: relative;display: inline-block;}
+.login-box .login-bottom ul li a span:before {content: "";position: absolute;display: block;margin: 0 15px 0 0;top: 50%;transform: translateY(-50%);}
+.login-box .login-bottom ul li.naver a span:before {background: url(../../assets/images/common/ico-n.png) no-repeat center;width: 16px;height: 16px;background-size: contain;left: -26px;}
+.login-box .login-bottom ul li.facebook a span:before {/* background: url(../img/common/ico-fb.png) no-repeat center; */width: 20px;height: 20px;background-size: contain;left: -30px;}
+.login-box .login-bottom ul li.kakao a span:before {background: url(../../assets/images/common/icon-kakao.jpg) no-repeat center;width: 24px;height: 24px;background-size: contain;left: -34px;}
+.bottom-header-wrap.zIndex {z-index: 0;}
+
+@media screen and (max-width: 768px) {
+    .tab-content {padding: 15px;}
+    .tab-a {font-size: 14px;}
+    .login-wrap {overflow: auto;}
+    .login-inner .btn-close {top: 20px;right: 20px;}
+    .login-inner .btn-close img {width: 50px;height: 50px;}
+    .login-wrap .login-inner {padding: 112px 20px;display: block;}
+    .login-inner .login-body-box {width: auto;}
+    .login-box .inner-form:last-of-type {margin-bottom: 20px;}
+    .login-box .btn-login {padding: 14.5px 20px;font-size: 16px;line-height: 1}
+    .login-box .login-bottom ul li a {font-size: 16px;padding: 14.5px 0 !important}
+    .login-box .login-bottom ul {display: block;}
+    .login-box .login-bottom ul li {width: 100%;}
+    .login-box .login-bottom ul li + li {margin-top: 15px;}
+    .login-inner .login-body-box h2 {font-size: 20px;line-height: 30px;}
+    .login-inner .login-body-box p {font-size: 14px;line-height: 21px;}
+    .login-box .inner-form label {font-size: 14px;line-height: 18.2px;}
+    .login-box .inner-form input {padding: 10px 20px;}
+}
